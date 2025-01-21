@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login page</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/medias.css">
 </head>
 <body>
     <main>
@@ -15,8 +16,17 @@
             <div id="formulario">
                 <h1>login</h1>
                 <p>Bem vindo de volta,coloque seu email e senha para acessar sua conta</p>
-                <form action="login.php" method="post">
-
+                <form action="login.php" method="post" autocomplete="on">
+                    <div class="campo">
+                        <label for="iemail">login:</label>
+                        <input type="email" name="email" id="iemail" required autocomplete="email" maxlength="30" placeholder="email">
+                    </div>
+                    <div class="campo">
+                        <label for="isen">senha:</label>
+                        <input type="password" name="sen" id="isen" required autocomplete="current-password" minlength="8" placeholder="senha">
+                    </div>
+                    <input type="submit" value="entrar">
+                    <a href="esqueceu.html">enqueceu a senha?</a>
                 </form>
             </div>
         </section>
